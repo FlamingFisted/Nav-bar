@@ -1,0 +1,174 @@
+html,
+body {
+  background: linear-gradient(to right bottom, yellow 3%, orange, red);
+  margin: none;
+}
+
+h1 {
+  margin-left: 6.5rem;
+  margin-right: 1rem;
+  min-width: 3ch;
+  max-width: 20ch;
+  border-bottom: 10px solid black;
+
+  padding-top: 4em;
+  padding-bottom: 0em;
+  text-align: center;
+  font-family: "Bungee Spice", cursive;
+}
+p {
+  margin-right: 1rem;
+  min-width: 40ch;
+  max-width: 55ch;
+  margin-left: 6.5rem;
+  padding: 2rem;
+  background: linear-gradient(darkgrey, black);
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  box-shadow: 0 0 5px 0 black;
+  transition: 300ms;
+}
+
+p:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 62px 0 black;
+}
+.img {
+  height: 5em;
+  width: 5em;
+  background: url("images/cool_cat.jpg") no-repeat center center/cover;
+  outline: dotted blue;
+  position: absolute;
+  top: 50vh;
+  left: 900px;
+  padding: 10em;
+  transform: rotate(0deg);
+  box-shadow: 0 0 2px 0;
+  transition: 600ms;
+  display: none;
+}
+
+.img:hover {
+  transform: rotate(15deg) scale(1.1) translate(0, 0);
+  box-shadow: 0 0 50px 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.5rem;
+}
+body::-webkit-scrollbar-track {
+  background-color: #5e0d0d;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  height: 0.25rem;
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  width: 6rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #9b1717;
+  transition: 600ms;
+}
+.navbar-nav {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10rem;
+  height: 100vh;
+  font-size: 0.5rem;
+}
+.nav-item {
+  transform: scale(1.8);
+  transition: 600ms;
+  margin-left: -1rem;
+  margin-top: 2rem;
+}
+.link-text {
+  font-family: "Quicksand", san-serif;
+  border: none;
+  display: none;
+}
+.navbar:hover {
+  width: 16rem;
+}
+.nav-item:hover {
+  transform: scale(2.4);
+}
+.navbar:hover .link-text {
+  display: block;
+}
+.navlink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  color: black;
+}
+.navlink:hover {
+  filter: grayscale(0%) opacity(1);
+  color: purple;
+}
+.nav-item:hover {
+  background: linear-gradient(yellow, orange, red);
+  box-shadow: 0 0 5px;
+}
+.gg-games {
+  transform: rotate(0deg);
+  transition: 600ms;
+}
+.navbar:hover .gg-games {
+  transform: rotate(-180deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    position: fixed;
+    margin-top: 96vh;
+    width: 100vw;
+    height: 4vh;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 3vh;
+    margin-top: 96vh;
+  }
+
+  .nav-item {
+    transform: scale(1.1);
+    transition: 600ms;
+    margin-bottom: 20px;
+  }
+  .nav-item:hover {
+    transform: scale(1.3);
+  }
+  .navbar:hover {
+    height: 8vh;
+    width: 100vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .img {
+    display: block;
+  }
+}
